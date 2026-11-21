@@ -1,0 +1,29 @@
+services:
+  postgres:
+    image: postgres:18
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bluestaq
+    ports:
+      - 5432:5432
+    volumes:
+      - bluestaq_data:/var/lib/postgresql
+    container_name: postgres
+
+  # bluestaq:
+  #   build:
+  #     context: .
+  #     dockerfile: Dockerfile
+  #   ports:
+  #     - 80:80
+  #   volumes:
+  #     - ./src:/app/src
+  #   # entrypoint: ["npm", "run", "dev"]
+  #   # entrypoint: ["tsx", "watch", "./src/index.ts", "80"]
+  #   container_name: bluestaq
+
+volumes:
+  bluestaq_data:
+  

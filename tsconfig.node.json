@@ -1,0 +1,10 @@
+{
+  // Type-checks root-level tool configs (drizzle.config.ts) for the editor
+  "extends": "./tsconfig.app.json",
+  "compilerOptions": {
+    "rootDir": ".",
+    "outDir": "./node_modules/.tmp/tsconfig.node",
+    "emitDeclarationOnly": true
+  },
+  "include": ["drizzle.config.ts"]
+}
