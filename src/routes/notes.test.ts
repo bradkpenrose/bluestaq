@@ -4,7 +4,7 @@ import test, { describe } from "node:test";
 
 describe("note route test", () => {
 
-    test("test list", async() => {
+    test("http list", async() => {
         const res = await fetch("http://localhost:3000/notes")
         assert.strictEqual(res.status, 200)
 

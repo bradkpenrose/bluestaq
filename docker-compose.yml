@@ -21,7 +21,6 @@ services:
   #   volumes:
   #     - ./src:/app/src
   #   # entrypoint: ["npm", "run", "dev"]
-  #   # entrypoint: ["tsx", "watch", "./src/index.ts", "80"]
   #   container_name: bluestaq
 
 volumes:
